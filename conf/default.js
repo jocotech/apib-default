@@ -24,13 +24,13 @@ module.exports = {
 	// APIKey header is the value of the key.  you can also set this to 'plugin' and define the key 'APIKeyAuthPlugin'
 	// which points to a file or a module that implements the authentication strategy.
 	// If you want to remove authentication then set this to 'none'.
-	APIKeyAuthType: 'basic',
+	APIKeyAuthType: 'apikey',
 
 	// This is the base url the service will be reachable at not including the port
 	baseurl: 'http://localhost',
 
 	// This is the port the service will be bound to
-	port: 8080,
+	port: 8085,
 
 	// Enabling this property will print out the process.env at startup time
 	printEnvVars: false,
@@ -60,7 +60,7 @@ module.exports = {
 		// server. IP ranges can also be specified. e.g. [ 'localhost', '192.168.1.0/24', '10.1.1.1' ]
 		// An empty list [] will allow unrestricted access, though this is not recommended due to security concerns.
 		allowedHosts: [
-			'localhost', '::1'
+			//'localhost', '::1'
 		]
 	},
 
