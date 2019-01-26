@@ -11,11 +11,11 @@ WORKDIR /app
 # -S stands for '--system'
 # -G stands for group
 # -R changes the ownership rights of a file recursively
-RUN addgroup -S axway-group && adduser -S axway-user -G axway-group && \
-	chown -R axway-user:axway-group /app
+RUN addgroup -S users && adduser -S axway -G users && \
+	chown -R axway:users /app
 
 # Set non-root user
-USER axway-user
+USER axway
 
 # Denotes to copy all files in the service to 'app' folder in the container
 COPY . /app
