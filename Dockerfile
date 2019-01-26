@@ -23,5 +23,8 @@ COPY . /app
 # Install service dependencies relevant for production builds skipping all development dependencies.
 RUN npm install --production --no-optional
 
+# Run audit fix in case there are dependency issues
+RUN npm audit fix
+
 # Starts the service
 CMD ["node", "."]
