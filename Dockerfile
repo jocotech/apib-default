@@ -24,7 +24,7 @@ COPY . /app
 RUN npm install --production --no-optional
 
 # Run audit fix in case there are dependency issues
-RUN npm audit fix
+#RUN npm audit fix
 
 # Starts the service
 CMD ["node", "."]
