@@ -11,8 +11,8 @@ WORKDIR /app
 # -S stands for '--system'
 # -G stands for group
 # -R changes the ownership rights of a file recursively
-RUN addgroup -S users && adduser -S axway -G users && \
-	chown -R axway:users /app
+RUN addgroup -S axway-group && adduser -S axway -G axway-group && \
+	chown -R axway:axway-group /app
 
 # Set non-root user
 USER axway
