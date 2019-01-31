@@ -24,7 +24,7 @@ module.exports = {
 	// APIKey header is the value of the key.  you can also set this to 'plugin' and define the key 'APIKeyAuthPlugin'
 	// which points to a file or a module that implements the authentication strategy.
 	// If you want to remove authentication then set this to 'none'.
-	APIKeyAuthType: 'none',
+	APIKeyAuthType: 'basic',
 
 	// This is the base url the service will be reachable at not including the port
 	baseurl: 'http://localhost',
